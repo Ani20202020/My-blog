@@ -1,0 +1,87 @@
+/* Resetting general margin, padding and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Style */
+body {
+    background-color: #e8f1f2;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Main Container */
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Style */
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #007bff;
+}
+
+/* Form Inputs */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #0056b3;
+    outline: none;
+}
+
+/* Submit Button */
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Success and Error Messages */
+.alert {
+    padding: 10px;
+    color: white;
+    margin-top: 15px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.alert.success {
+    background-color: #28a745;
+}
+
+.alert.error {
+    background-color: #dc3545;
+}
