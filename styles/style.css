@@ -1,87 +1,160 @@
-/* Resetting general margin, padding and box-sizing */
-* {
+/* Հիմնական սթայլներ */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e8f1f2;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body Style */
-body {
-    background-color: #e8f1f2;
-    font-family: 'Roboto', sans-serif;
-}
-
-/* Main Container */
-.container {
-    max-width: 500px;
-    margin: 50px auto;
-    padding: 30px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-/* Header Style */
-header {
-    text-align: center;
-    padding: 20px;
-}
-
-header h1 {
-    font-size: 2.5rem;
-    color: #007bff;
-}
-
-/* Form Inputs */
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border: 2px solid #007bff;
-    border-radius: 5px;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="password"]:focus {
-    border-color: #0056b3;
-    outline: none;
-}
-
-/* Submit Button */
-button {
-    background-color: #007bff;
+  }
+  
+  header {
+    background-color: #28a745;
     color: white;
-    padding: 12px;
+    padding: 1rem;
+  }
+  
+  header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header nav ul li {
+    margin: 0 15px;
+  }
+  
+  header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  header nav ul li a.active {
+    text-decoration: underline;
+  }
+  
+  /* .container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  } */
+  
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  form input {
     width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
     border: none;
     border-radius: 5px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-/* Success and Error Messages */
-.alert {
-    padding: 10px;
-    color: white;
-    margin-top: 15px;
     font-size: 1rem;
-    text-align: center;
-}
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #218838;
+  }
+  
+  /* Նավբարի ընդհանուր ձևավորում */
+  .navbar {
+    padding: 5px 15px; /* Փոքրացնում ենք ներքին հեռավորությունը */
+    background-color: transparent; /* Թափանցիկ դարձնել */
+  }
+  
+  .navbar-toggler {
+    border: none; /* Վերացնում ենք սահման */
+    /* background: none; */
+  }
 
-.alert.success {
-    background-color: #28a745;
-}
+  .navbar-toggler-icon {
+    /* width: 30px; /* Տեսանելիության մեծություն */
+    /* height: 3px; Գծերի բարձրություն */ 
+    display: block;
+    transition: 0.3s ease-in-out;
+    color: #eddfe1;
 
-.alert.error {
-    background-color: #dc3545;
-}
+  }
+
+  .navbar-toggler-icon::before,
+  .navbar-toggler-icon::after {
+    /* content: ""; */
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .navbar-toggler-icon::before {
+    top: -7px; /* Կարճ տարբերություն */
+  }
+  
+  .navbar-toggler-icon::after {
+    bottom: -7px;
+  }
+  
+  /* Հեղինակությունը արա միայն աջ կողքին */
+  .navbar-toggler {
+    margin-left: auto;
+  }  
+
+
+  /* Նավբարի հղումների գույն */
+  .navbar .nav-link {
+    color: #1071d2; /* Բացի սպիտակ գույն */
+    transition: color 0.3s ease; /* Գույնի անցում */
+  }
+  
+  .navbar .nav-link:hover {
+    color: #ffc107; /* Դեղին գույն հովեր անելիս */
+  }
+  
+  /* Նավբարի ֆոն */
+  .navbar-dark.bg-dark {
+    background-color: #343a40 !important; /* Ավելի մուգ գույն */
+  }
+  
+  /* Նավբարի լոգո */
+  .navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #ffc107; /* Դեղին գույն */
+    transition: transform 0.3s ease;
+  }
+  
+  .navbar-brand:hover {
+    transform: scale(1.1); /* Փոքր մեծացում հովեր անելիս */
+    color: #09b396; /* Սպիտակ գույն */
+  }
+  
+  /* Նավբարի կոճակ (mobile view) */
+  .navbar-toggler {
+    border: none; /* Հեռացնել եզրը */
+  }
+  
+  .navbar-toggler-icon {
+    filter: invert(1); /* Սպիտակ պատկերակ */
+  }
+  
